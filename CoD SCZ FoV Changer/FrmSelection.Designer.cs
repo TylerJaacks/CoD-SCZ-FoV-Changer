@@ -48,6 +48,7 @@
             this.lstCoDs.ScrollAlwaysVisible = true;
             this.lstCoDs.Size = new System.Drawing.Size(344, 90);
             this.lstCoDs.TabIndex = 0;
+            this.lstCoDs.SelectedIndexChanged += new System.EventHandler(this.lstCoDs_SelectedIndexChanged);
             this.lstCoDs.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstCoDs_KeyDown);
             this.lstCoDs.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstCoDs_MouseDoubleClick);
             // 

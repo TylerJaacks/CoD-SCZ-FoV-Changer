@@ -79,12 +79,19 @@ namespace CoD_SCZ_FoV_Changer
             };
             _cods.Add(bo1);
 
-            var mw3 = new CallOfDuty("Call of Duty: Modern Warfare 3", "iw5sp", 42680)
+            var mw3sp = new CallOfDuty("Call of Duty: Modern Warfare 3", "iw5sp", 42680)
             {
-                FovPointer = new Memory.Pointer((IntPtr)0x00676130, new short[] {0xC}),
-                FovScalePointer = new Memory.Pointer((IntPtr)0x0067601C, new short[] {0xC})
+                FovPointer = new Memory.Pointer((IntPtr)0x00676130, new short[] { 0xC }),
+                FovScalePointer = new Memory.Pointer((IntPtr)0x0067601C, new short[] { 0xC })
             };
-            _cods.Add(mw3);
+            _cods.Add(mw3sp);
+
+            var mw3mp = new CallOfDuty("Call of Duty: Modern Warfare 3 Multiplayer", "iw5mp", 42690)
+            {
+                FovPointer = new Memory.Pointer((IntPtr)0x00676130, new short[] { 0xC }),
+                FovScalePointer = new Memory.Pointer((IntPtr)0x0067601C, new short[] { 0xC })
+            };
+            _cods.Add(mw3mp);
         }
 
         private void Select(CallOfDuty cod)
@@ -130,6 +137,11 @@ namespace CoD_SCZ_FoV_Changer
                     }
                 }
             }
+        }
+
+        private void lstCoDs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
